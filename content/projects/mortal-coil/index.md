@@ -300,7 +300,7 @@ local values: {any} = {} -- Stores data associated with each cell (like its occu
 
 local weightsMap: {{[string]: number}} = {}
 
-local function addVertex(value)
+local function vertex(value)
 	size += 1
 	table.insert(graph, {})
 	table.insert(weights, {})
