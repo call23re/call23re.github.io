@@ -111,8 +111,11 @@ This approach, however, will only make it through the first 40 levels or so befo
 ## Counting Dead Ends
 The complexity of the problem is determined primarily by the number of valid moves from any given board state and position, and it increases significantly every 50 levels or so. More intuitively, the longer it takes your solver to backtrack, to notice that it's travelling along a bad path, the longer it will take to finish a level. Basically: backtracking early is good.
 
-![](./images/iterations_100.png)
-_Complexity heatmap for each starting position on level 100, where red is more complex and green is most complex._
+![](./images/iterations_150.png)
+_Complexity heatmap for each starting position on level 150, where red is more complex and green is most complex._
+
+![](./images/paths_150.png)
+_Paired with the length of the best path for each position on level 150, where red is better and green is the best. Hard positions do not exactly correspond to the best paths!_
 
 To stop going down bad paths early, the most effective heuristic is counting dead ends. You can only have one dead end: your end position. If by moving along you create two dead ends, then you have to backtrack. Importantly, you shouldn't consider the position in front of the coil to be a dead end because the coil can still pass through that position.
 
