@@ -291,14 +291,16 @@ I use an [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) to repre
 
 It looks something like this:
 ```lua
+type Weight = "UP" | "DOWN" | "LEFT" | "RIGHT" | "NONE"
+
 local size = 0
 local sizeEdges = 0
 
 local graph: {{number}} = {}
-local weights: {{string}} = {}
+local weights: {{Weight}} = {}
 local values: {any} = {} -- Stores data associated with each cell (like its occupancy)
 
-local weightsMap: {{[string]: number}} = {}
+local weightsMap: {{[Weight]: number}} = {}
 
 local function vertex(value)
 	size += 1
@@ -307,7 +309,7 @@ local function vertex(value)
 	table.insert(values, value)
 end
 
-local function directedEdge(a, b, weight)
+local function directedEdge(a, b, weight: Weight)
 	if table.find(graph[a], b) then return end
 
 	table.insert(graph[a], b)
@@ -322,9 +324,7 @@ local function directedEdge(a, b, weight)
 	end
 end
 
-local function neighbor(vertex, weight)
-	if weight ~= "UP" and weight ~= "DOWN" and weight ~= "LEFT" and weight ~= "RIGHT" and weight ~= "NONE" then return end
-
+local function neighbor(vertex, weight: Weight)
 	local index = weightsMap[vertex][weight]
 	return {
 		Direction = weight,
