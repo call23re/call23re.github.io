@@ -62,7 +62,7 @@ jobs:
         with:
           path: ./public
       - name: List filesystem
-        run: ls
+        run: ls public -type f
 
   # Deployment job
   deploy:
