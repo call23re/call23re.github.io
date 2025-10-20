@@ -1,0 +1,17 @@
+<div style="display: flex; justify-content: {{ .Get "alignment" | default "left" }}; align-items: flex-start; gap: {{ .Get "gap" | default "10px" }};">
+  {{ if .Get "link_left" }}
+    <a href="{{ .Get "link_left" }}">
+      <img src="{{ .Get "left" }}" alt="" style="height: auto;">
+    </a>
+  {{ else }}
+      <img src="{{ .Get "left" }}" alt="" style="height: auto;">
+  {{ end }}
+
+  {{ if .Get "link_right" }}
+    <a href="{{ .Get "link_right" }}">
+      <img src="{{ .Get "right" }}" alt="" style="height: auto;">
+    </a>
+  {{ else }}
+      <img src="{{ .Get "right" }}" alt="" style="height: auto;">
+  {{ end }}
+</div>
