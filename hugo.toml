@@ -1,6 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = ''
+theme = 'typo'
 
 # Google analytics code
 googleAnalytics = "G-xxxxxxxxx"
@@ -11,11 +12,6 @@ tag = 'tags'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-
-[module]
-	[[module.imports]]
-		path = "github.com/tomfran/typo"
-
 
 [params]
 # Meta description
