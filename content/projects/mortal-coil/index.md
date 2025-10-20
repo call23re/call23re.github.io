@@ -106,7 +106,7 @@ for y = 1, #grid do
 end
 ```
 
-This approach, however, will only make it through the first 40 levels or so before it sputters out. It uses a lot of memory copying and keeping track of tables, which can be remedied with a simple backtracking approach (necessary on higher levels), but there is also a straight-forward heuristic which helps to reduce the number of iterations significantly.
+This approach, however, will only make it through the first 40 levels or so before it sputters out. It uses a lot of memory copying and keeping track of tables, which can be remedied by switching to a simple backtracking approach instead (necessary on higher levels), but there is also a straight-forward heuristic which helps to reduce the number of iterations significantly.
 
 ## Counting Dead Ends
 The complexity of the problem is determined primarily by the number of valid moves from any given board state and position, and it increases significantly every 50 levels or so. More intuitively, the longer it takes your solver to backtrack, to notice that it's travelling along a bad path, the longer it will take to finish a level. Basically: backtracking early is good.
