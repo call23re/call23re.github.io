@@ -1,0 +1,33 @@
+<a href="{{ .RelPermalink }}">
+	<div class="post-line">
+
+		{{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
+
+		<div class="post-line-left">
+			{{ if .Parent.Param "showListDate" | default true }}
+				<p class="line-date">{{ .Date | time.Format $dateFormat }}</p>
+			{{ end }}
+
+			{{/* Prefer a page bundle image at images/icon.* or icon.*; fall back to site asset */}}
+			{{ $img := .Resources.GetMatch "images/icon.*" }}
+			{{ if not $img }}
+				{{ $img = .Resources.GetMatch "icon.*" }}
+			{{ end }}
+			{{ if $img }}
+				<a href="{{ .RelPermalink }}">
+					<img class="post-thumb" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+				</a>
+			{{ end }}
+		</div>
+
+		<div class="post-line-right">
+			<p class="line-title">
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			</p>
+
+			{{ if .Site.Params.listSummaries }}
+				<p class="line-summary">{{ .Summary }}</p>
+			{{ end }}
+		</div>
+	</div>
+</a>

@@ -1,0 +1,88 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = ''
+theme = 'typo'
+
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = ""
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+showFooter = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Hi!'
+homeIntroContent = """
+I'm Nicholas, a 23-year-old programmer from Arkansas.
+
+I've been writing code for over 10 years, primarily within the Roblox ecosystem. I like to work on plugins, but I can write gameplay code too.
+
+I am proficient in both Luau and JavaScript (ES6). I usually work in Visual Studio Code, and I'm familiar with tools like Rojo, Git, Lune, and Selene, and with popular libraries like React and Matter.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Projects'
+homeCollection = 'projects'
+
+# Page parameters
+singleDateFormat = 'January 2006'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = 'January 2006'
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = false
+showCurrentPage = true
+home = "Home"
+
+# Social icons
+[[params.social]]
+name = "roblox"
+url = "https://devforum.roblox.com/u/cornprices/summary"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/call23re"
+
+[[params.social]]
+name = "discord"
+url = "https://discord.com/users/23re"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "projects"
+url = "/projects"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'evergarden'
+[markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
