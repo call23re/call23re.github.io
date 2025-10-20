@@ -19,7 +19,7 @@ A simple, ergonomic camera waypoint plugin for quickly navigating in Roblox Stud
 	{{< youtube TfEFro7I9GU >}}
 </br>
 
-There is no ergonomic way to navigate large levels in Roblox Studio. "Flying" from one place to another is slow, and "Zoom to" requires tediously navigating through the explorer and using a keyboard shortcut. Views solves this problem with a simple, unobtrusive tab-based user interface. It's fast and it's designed to stay out of the way until you need it. It supports team create, and camera saves are easily transferrable between places.
+There is no ergonomic way to navigate large levels in Roblox Studio. "Flying" from one place to another is slow, and "Zoom to" requires tediously navigating through the explorer. Views solves this problem with a simple, unobtrusive tab-based user interface. It's fast and it's designed to stay out of the way until you need it. It supports team create, and camera saves are easily transferrable between places.
 
 For more information see the [Developer Forum](https://devforum.roblox.com/t/views-a-simple-camera-waypoint-plugin/2937077) page.
 
