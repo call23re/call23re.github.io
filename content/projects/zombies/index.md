@@ -7,7 +7,7 @@ showTags = true
 hidePagination = true
 +++
 
-Wrote the gameplay logic for an unrealized zombie game, including third-person weapons and zombie/NPC AI, utilizing Matter and React for gameplay and UI code respectively.
+Wrote the gameplay logic for an unrealized zombie game, including third-person over-the-shoulder weapons and zombie/NPC AI, utilizing Matter and React for gameplay and UI code respectively.
 
 <!--more-->
 

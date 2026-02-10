@@ -7,7 +7,7 @@ showTags = true
 hidePagination = true
 +++
 
-A comprehensive plugin for inserting assets in to Roblox Studio.
+A comprehensive plugin for inserting marketplace/creator store assets in to Roblox Studio.
 
 <div style="line-height:50%;">
     <br>
