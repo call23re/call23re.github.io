@@ -26,7 +26,7 @@ showFooter = false
 # Intro on main page, content is markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I'm Nicholas, a 23-year-old programmer from Arkansas.
+I'm Nicholas, a 24-year-old programmer from Arkansas.
 
 I've been writing code for over 10 years, primarily within the Roblox ecosystem. I like to work on gameplay code, UI code, and tooling.
 
@@ -54,7 +54,7 @@ home = "Home"
 # Social icons
 [[params.social]]
 name = "roblox"
-url = "https://devforum.roblox.com/u/cornprices/summary"
+url = "https://www.roblox.com/users/13936322/profile/"
 
 [[params.social]]
 name = "github"
