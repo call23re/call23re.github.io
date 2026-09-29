@@ -1,13 +1,13 @@
 +++
 date = '2026-06-01T00:00:00-00:00'
 draft = false
-title = 'Tennis'
+title = 'Infinite Tennis'
 tags = ['Roblox', 'ECS', 'Jecs', 'React']
 showTags = true
 hidePagination = true
 +++
 
-A work-in-progress, fast-paced tennis game.
+A fast-paced, arcade-like tennis game.
 
 <br>
 	{{< youtube D2bt8n83aig >}}
@@ -22,8 +22,10 @@ A work-in-progress, fast-paced tennis game.
 
 <!--more-->
 
-Infinite Tennis is a project I work on intermittently (when I have the time). The gameplay is fast and the mechanics are fairly deep. The trajectory of the ball is influenced by multiple factors, including the ball's incoming angle, the player's position on the court, the shot type, swing direction, and the directional bias bar. The game follows a simple, custom server-authoratative networking model, meaning the ball itself is simulated locally via a comparably simple, custom physics pipeline. This helps to avoid a number of issues relating to cheating and network ownership.
+Infinite Tennis is a work-in-progress, semi-competitive, arcade-like tennis game. The gameplay is fast-paced -- the average period between returns is less than a second. The trajectory of the ball is influenced by a number of factors, including the ball's incoming angle, the player's position on the court, the shot type, swing direction, and the directional bias/aiming bar, all of which together make the gameplay fairly deep and strategic.
 
-Players can play real players or simulated agents. By default, matches end after two sets, but later I intend to implement custom matches for shorter sessions. I also intend to implement ELO and leveling systems for progression.
+Because the game is semi-competitive, I took a custom server-authoritative approach to simulating the ball. Specifically, in implementing a simple, deterministic physics pipeline for the ball, I get a single, reliable source of truth for its position. The server owns the ball, and the server and clients all independently predict its motion, the latter based on reliable updates communicated by the server. This has allowed for me to explicitly handle the extrapolation logic for high-latency players, and it makes sanity checking player inputs much simpler.
 
-The game supports PC, mobile, and console controls. I hope to release it sometime toward the end of 2026. It's thematically inspired by the book _Infinite Jest_.
+Players can play real opponents or simulated agents. By default, matches end after two sets. Though the gameplay can be competitive, the environment is designed to be casual and relaxing. It's thematically inspired in some ways by the book _Infinite Jest_ (hard to explain: not super explicitly, but in a vibes kind of way), and it has been surprisingly rewarding working on the environment and atmosphere.
+
+The game supports keyboard and mouse, touch, and gamepad controls. I hope to release it sometime toward the end of 2026.
