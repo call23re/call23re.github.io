@@ -26,6 +26,6 @@ Infinite Tennis is a work-in-progress, semi-competitive, arcade-like tennis game
 
 Because the game is semi-competitive, I took a custom server-authoritative approach to simulating the ball. Specifically, in implementing a simple, deterministic physics pipeline for the ball, I get a single, reliable source of truth for its position. The server owns the ball, and the server and clients all independently predict its motion, the latter based on reliable updates communicated by the server. This has allowed for me to explicitly handle the extrapolation logic for high-latency players, and it makes sanity checking player inputs much simpler.
 
-Players can play real opponents or simulated agents. By default, matches end after two sets. Though the gameplay can be competitive, the environment is designed to be casual and relaxing. It's thematically inspired in some ways by the book _Infinite Jest_ (hard to explain: not super explicitly, but in a vibes kind of way), and it has been surprisingly rewarding working on the environment and atmosphere.
+Players can play real opponents or simulated agents. By default, matches end after two sets. Though the gameplay can be competitive, the environment is designed to be casual and relaxing. It's thematically inspired in some ways by the book _Infinite Jest_ (not super explicitly, but in a vibes kind of way), and working on the environment and atmosphere has been surprisingly rewarding.
 
 The game supports keyboard and mouse, touch, and gamepad controls. I hope to release it sometime toward the end of 2026.
